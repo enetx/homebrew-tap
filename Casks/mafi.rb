@@ -1,6 +1,6 @@
 cask "mafi" do
-  version "1.0.5"
-  sha256 "c2173312340763db75731c3daa07ee799e9de3874cc6671b8c995a590fa3c0f4"
+  version "1.0.6"
+  sha256 "13ca94b0916de810fc87650733f39cad1bf1eb734e7c303c29a5a6e5912a548a"
 
   url "https://github.com/enetx/mafiapp/releases/download/v#{version}/Mafi.zip"
   name "Mafi"
@@ -9,6 +9,8 @@ cask "mafi" do
 
   postflight do
     system "xattr -d com.apple.quarantine #{appdir}/Mafi.app"
+    system "xattr -d com.apple.quarantine #{appdir}/Mafi.app/Contents/MacOS/mafi"
+    system "xattr -d com.apple.quarantine #{appdir}/Mafi.app/Contents/Helpers/cbagent"
   end
 
   app "Mafi.app"
