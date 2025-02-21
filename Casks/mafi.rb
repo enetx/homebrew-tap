@@ -12,6 +12,10 @@ cask "mafi" do
     system "codesign --force --deep --sign - #{appdir}/Mafi.app"
   end
 
+  uninstall_preflight do
+    system "[ -f ~/.local/bin/cbagent ] && ~/.local/bin/cbagent uninstall"
+  end
+
   app "Mafi.app"
 
   caveats <<~EOS
