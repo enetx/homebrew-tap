@@ -1,6 +1,6 @@
 cask "mafi" do
-  version "1.0.25"
-  sha256 "45b98a15a02c2584ebacfb9935a3e79e61d83fc26a4ff0e311bf2f0d7bf331df"
+  version "1.0.26"
+  sha256 "801c81b710d52debfdc131f6bfc2d262e46e0f3e11bd5d1bc28c6e388dd2a011"
 
   url "https://github.com/enetx/mafiapp/releases/download/v#{version}/Mafi.zip"
   name "Mafi"
