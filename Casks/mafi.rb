@@ -14,7 +14,11 @@ cask "mafi" do
 
   uninstall_preflight do
     system "[ -f ~/.local/bin/cbagent ] && ~/.local/bin/cbagent uninstall"
+    system_command "/usr/bin/tccutil",
+                   args: ["reset", "All", "com.mafi.app"],
+                   sudo: false
   end
+
 
   app "Mafi.app"
 
